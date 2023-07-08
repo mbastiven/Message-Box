@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>React Message popup</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <section class="post">
+          <header>Message Box</header>
+          <form action="#">
+            <div class="content">
+              <img src="icons/pic.jpg" alt="logo">
+              <div class="details">
+                <p>Mr Noncio</p>
+                <div class="privacy">
+                  <i class="fas fa-user-friends"></i>
+                  <span> Student</span>
+            
+                  <i class="fas fa-caret-down"></i>
+              
+                </div>
+                
+                <span> <input  id="em"  type="email"required placeholder="email"
+               ></span>
+              </div>
+            </div>
+            <textarea placeholder="What's on your mind, Mr Noncio?" spellcheck="false" required></textarea>
+            <span> <label for="name">Add A file</label> </span><br><input type="file"
+       id="avatar" name="avatar"
+      >
+            <div class="theme-emoji">
+            
+
+            </div>
+            <div class="space"></div>
+            <button>Sent</button>
+     
+            
+          </form>
+        </section>
+        <section class="audience">
+          <header>
+            <div class="arrow-back"><i class="fas fa-arrow-left"></i></div>
+            <p>Select Destinator</p>
+          </header>
+          <div class="content">
+            <p>Sent your message to a specific user</p>
+       
+          </div>
+          <ul class="list">
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                <div class="details">
+                  <p>Global Message</p>
+                  <span>All school actors </span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-user-friends"></i></div>
+                <div class="details">
+                  <p>Student</p>
+                  <span>To one of your student</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li class="active">
+              <div class="column">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                <div class="details">
+                  <p>Teachers</p>
+                  <span>To one lecture</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <div class="details">
+                  <p>Adminitrative staff</p>
+                  <span>To one staff member </span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+      
+        
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container"),
+      privacy = container.querySelector(".post .privacy"),
+      arrowBack = container.querySelector(".audience .arrow-back");
+
+      privacy.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      arrowBack.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+    
+  </body>
+</html>
